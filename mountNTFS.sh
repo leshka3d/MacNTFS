@@ -7,7 +7,7 @@ if [[ "$DISK_NAME" == "" ]]; then
 fi
 DISK_DEVICERW="/dev/${DISK_DEVICE}"
 DISK_NAME=$(tr -dc '[[:print:]]' <<< "$DISK_NAME" | rev | cut -c1- |rev)
-DISK_NAMERW="/Volumes/${DISK_NAME}RW"
+DISK_NAMERW="/Volumes/${DISK_NAME}MacNTFSRW"
 DISK_DEL="/Volumes/${DISK_NAME}"
 diskutil unmount $DISK_DEL
 if sudo mkdir $DISK_NAMERW; then 
